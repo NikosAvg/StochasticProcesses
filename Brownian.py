@@ -4,7 +4,7 @@ Simulates a Browninan Motion process using the Euler-Maruyama method.
 """
 import numpy as np
 
-def Brownian_motion(mu=0, sigma=1, X0=1, T=1, dt=0.1):
+def BrownianMotion(mu=0, sigma=1, X0=1, T=1, dt=0.1):
     N = int(T/dt)
     time = np.linspace(0, T, N)
     # Initialize the process array and set the initial value
