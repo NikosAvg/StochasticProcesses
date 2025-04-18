@@ -1,4 +1,4 @@
-#StochasticProcesses/OU.py
+# StochasticProcesses/OU.py
 """
 Simulates an Ornstein-Uhlenbeck process using the Euler-Maruyama method.
 
@@ -32,8 +32,9 @@ Simulates an Ornstein-Uhlenbeck process using the Euler-Maruyama method.
 """
 import numpy as np
 
-def OU(theta=0.7, mu=0, sigma=1, X0=1, dt=0.1, N=100):
+def OU(theta=0.7, mu=0, sigma=1, X0=1, T=1, dt=0.1):
     # Generate the time grid
+    N = int(T/dt)
     time = np.linspace(0, T, N)
 
     # Initialize the process array and set the initial value
@@ -43,3 +44,4 @@ def OU(theta=0.7, mu=0, sigma=1, X0=1, dt=0.1, N=100):
     for t in range(1, N):
         dW = np.random.normal(0, np.sqrt(dt))  # Wiener process increment
         X[t] = X[t-1] + theta * (mu - X[t-1]) * dt + sigma * dW
+    return X, time
