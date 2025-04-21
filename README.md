@@ -86,7 +86,6 @@ This package aims to include additional stochastic processes over time. Future a
 
 - Geometric Brownian Motion (GBM)
 - Poisson Process
-- Levy Process
 - Jump Diffusion Process
 
 
